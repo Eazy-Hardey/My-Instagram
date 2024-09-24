@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Components */
+@layer components {
+  /* Navigation Button */
+  .navBtn {
+    @apply h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
+    @apply text-gray-500 md:text-gray-700 hover:text-black; /* Color transition */
+    @apply focus:outline-none focus:ring-2 focus:ring-indigo-500; /* Focus state */
+    @apply active:scale-110 active:text-indigo-700; /* Active state */
+  }
+
+  /* Button Component */
+  .btn {
+    @apply h-7 px-4 py-2 rounded-lg text-white bg-blue-500 hover:scale-125 cursor-pointer transition-all duration-150 ease-out;
+    @apply hover:bg-blue-600; /* Hover background color */
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-300; /* Focus state */
+    @apply active:scale-110 active:bg-blue-700; /* Active state */
+    @apply disabled:bg-gray-300 disabled:cursor-not-allowed; /* Disabled state */
+  }
+
+  /* Card Component */
+  .card {
+    @apply p-4 bg-white shadow-md rounded-lg;
+    @apply transition-shadow hover:shadow-lg; /* Hover shadow effect */
+    @apply border border-gray-200; /* Border for better structure */
+  }
+
+  /* Avatar Component */
+  .avatar {
+    @apply h-12 w-12 rounded-full object-cover border-2 border-gray-300;
+    @apply transition-transform duration-200 hover:scale-110; /* Hover scale for avatars */
+  }
+
+  /* Badge Component */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold;
+    @apply bg-indigo-100 text-indigo-700; /* Default colors */
+    @apply hover:bg-indigo-200; /* Hover effect */
+  }
+}
+
+/* Reusable Utility Classes */
+@layer utilities {
+  /* Utility for hover scale with transition */
+  .hover-scale {
+    @apply hover:scale-125 transition-all duration-150 ease-out;
+  }
+
+  /* Utility for focus outline */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-indigo-500;
+  }
+
+  /* Utility for rounded corners with padding */
+  .rounded-corner {
+    @apply rounded-lg p-4;
+  }
+}
